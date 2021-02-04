@@ -64,3 +64,11 @@ table.striped > tbody > tr:nth-child(odd) {
 table{
   color:#e57373;
 }
+p,li{
+  font-size: 20px;
+ /* font-family: 'Times New Roman', Times, serif; */
+}
+b{
+  font-size: 23px;
+  color:#e57373;
+}
