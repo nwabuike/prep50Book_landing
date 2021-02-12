@@ -26,23 +26,22 @@
     </nav>
     <div class="carousel carousel-slider center" data-indicators="true">
         <div class="carousel-fixed-item center">
-            <p class="white-text">Smash Your Jamb With Prep50 Past Question</p>
+            <h4 class="white-text">Smash Your Jamb With Prep50 Past Questions</h4>
         </div>
-        <div class="carousel-item red white-text" href="#one!">
-            <h2>Prep50 Books</h2>
-            <p class="white-text">This is your Where Your success is Assured</p>
+        <div class="carousel-item white-text" href="#one!">
+            <!-- <h2>Prep50 Books</h2> -->
+            <img src="./img/back_3.jpg" class="responsive-img">
+            <!-- <p class="white-text">This is your Where Your success is Assured</p> -->
         </div>
-        <div class="carousel-item amber white-text" href="#two!">
-            <h2>Prep50 Books</h2>
-            <p class="white-text">This is your Where Your success is Assured</p>
+        <div class="carousel-item white-text" href="#two!">
+            <!-- <h2>Prep50 Books</h2> -->
+            <img src="./img/waec_ad.jpg" class="responsive-img">
+            <!-- <p class="white-text">This is your Where Your success is Assured</p> -->
         </div>
-        <div class="carousel-item green white-text" href="#three!">
-            <h2>Prep50 Books</h2>
-            <p class="white-text">This is your Where Your success is Assured</p>
-        </div>
-        <div class="carousel-item blue white-text" href="#four!">
-            <h2>Prep50 Books</h2>
-            <p class="white-text">This is your Where Your success is Assured</p>
+        <div class="carousel-item red white-text" href="#four!">
+            <!-- <h2>Prep50 Books</h2> -->
+            <!-- <p class="white-text">This is your Where Your success is Assured</p> -->
+            <img src="./img/back_4.jpg" class="responsive-img">
         </div>
     </div>
     <br>
@@ -248,11 +247,11 @@
                 </div>
             </div>
             <div class="row center">
-                <div class="col s12 m6">
-                    <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Jamb Soft Copy</a>
+                <div class="col s12 m6" style="margin-bottom: 20px;">
+                    <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
                 </div>
                 <div class="col s12 m6">
-                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Jamb Hard Copy</a>
+                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
                 </div>
             </div>
         </div>
@@ -305,7 +304,7 @@
 
             <div class="row center">
                 <div class="col s12 m12">
-                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Waec Hard Copy</a>
+                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Hard Copy</a>
                 </div>
             </div>
         </div>
@@ -438,14 +437,14 @@
         </div>
       </div> -->
             <div class="row center">
-                <div class="col s12 m4">
-                    <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Jamb Soft Copy</a>
+                <div class="col s12 m4" style="margin-bottom: 20px;">
+                    <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
+                </div>
+                <div class="col s12 m4" style="margin-bottom: 20px;">
+                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
                 </div>
                 <div class="col s12 m4">
-                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Jamb Hard Copy</a>
-                </div>
-                <div class="col s12 m4">
-                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Waec Hard Copy</a>
+                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Hard Copy</a>
                 </div>
             </div>
             <br>
@@ -886,6 +885,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
+                    $('#loader-icon').show();
                 }
             });
             handler.openIframe(); //open the paystack's payment modal
@@ -1016,6 +1016,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
+                    $('#loader-icon').show();
                 }
             });
             handler.openIframe();
@@ -1116,6 +1117,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
+                    $('#loader-icon').show();
                 }
             });
             handler.openIframe();
