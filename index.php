@@ -885,7 +885,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
-                    $('#loader-icon').show();
+                    $('#loader-icon').hide();
                 }
             });
             handler.openIframe(); //open the paystack's payment modal
@@ -1016,7 +1016,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
-                    $('#loader-icon').show();
+                    $('#loader-icon').hide();
                 }
             });
             handler.openIframe();
@@ -1117,7 +1117,7 @@
                 onClose: function() {
                     //when the user close the payment modal
                     alert('Transaction cancelled');
-                    $('#loader-icon').show();
+                    $('#loader-icon').hide();
                 }
             });
             handler.openIframe();
