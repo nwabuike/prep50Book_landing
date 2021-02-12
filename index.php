@@ -559,7 +559,7 @@
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="contactform">
                             <div class="card">
-                                <h2 class="red-text text-lighten-2 center">Prep50 Jamb Hard Copy</h2>
+                                <h4 class="red-text text-lighten-2 center">Prep50 Jamb Hard Copy</h4>
                                 <p class="red-text text-lighten-2 center">Please fill the following information</p>
                             </div>
                             <div class="row">
@@ -633,7 +633,7 @@
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="waecForm">
                             <div class="card">
-                                <h2 class="red-text text-lighten-2 center">Prep50 Waec</h2>
+                                <h4 class="red-text text-lighten-2 center">Prep50 Waec</h4>
                                 <p class="red-text text-lighten-2 center">Please fill the following information</p>
                             </div>
                             <div class="row">
