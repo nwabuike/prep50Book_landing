@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 
     <!--Let browser know website is optimized for mobile-->
@@ -729,6 +730,7 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript">
@@ -844,7 +846,7 @@
             console.log(phone);
             console.log(email);
             var handler = PaystackPop.setup({
-                key: 'pk_test_758495a9d79b4f78855cca77be03287bd635b3e6', //put your public key here
+                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email, //put your customer's email here
                 amount: 800000, //amount the customer is supposed to pay
                 metadata: {
@@ -973,7 +975,7 @@
             console.log(phone1);
             console.log(email1);
             var handler = PaystackPop.setup({
-                key: 'pk_test_758495a9d79b4f78855cca77be03287bd635b3e6', //put your public key here
+                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email1, //put your customer's email here
                 amount: 1000000, //amount the customer is supposed to pay
                 metadata: {
@@ -1074,7 +1076,7 @@
             console.log(waec_Hard_sci);
             console.log(waec_Hard_art);
             var handler = PaystackPop.setup({
-                key: 'pk_test_758495a9d79b4f78855cca77be03287bd635b3e6', //put your public key here
+                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email2, //put your customer's email here
                 amount: 1500000, //amount the customer is supposed to pay
                 metadata: {
