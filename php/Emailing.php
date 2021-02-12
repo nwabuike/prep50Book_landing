@@ -11,9 +11,9 @@ $fromName = $user_name;
 // Email subject 
 $subject = 'Prep50 Book';  
 
-if(!($user_bundle_j)){
+// if(!($user_bundle_j)){
 
-}
+// }
  
 // Attachment file 
     $file = "files/JAMB Govt 2020.pdf";

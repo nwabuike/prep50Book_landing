@@ -896,8 +896,8 @@
                     "email": $('input[name="email"]').val(),
                     "phone": $('input[name="phone"]').val(),
                     "address": $('input[name="address"]').val(),
-                    // "bundle_waec": $('select[name="bundle_waec"]').val(),
-                    "bundle_jamb": $('select[name="bundle_jamb[]"]').val()
+                    "bundle_jambSci": $('select[name="bundle_jamb_sci[]"]').val(),
+                    "bundle_jambArt": $('select[name="bundle_jamb_sci[]"]').val()
 
                 })
                 // .error(function(error) {});
