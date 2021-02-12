@@ -15,6 +15,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Prep50 | Books</title>
+    <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '686693168688131');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=686693168688131&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 
 </head>
 
@@ -56,7 +72,7 @@
             </h3>
             <br />
             <p>
-                Many students have labored to make A’s in their WAEC and JMAB exams
+                Many students have labored to make A’s in their WAEC and JAMB exams
                 but what if I can prove to you that the way they prepare for their
                 exams already guarantees that they will fail, no matter how hard they
                 try.
@@ -94,7 +110,7 @@
             </p>
 
             <p>
-                Well this is not totally a secret. If you have u ever picked up a
+                Well this is not totally a secret. If you have ever picked up a
                 textbook to read before, you will notice how each one is arranged in
                 chapters with topics and subtopics. That is because, this is the
                 scientifically proven way, human beings learn and assimilate info. It
@@ -145,7 +161,7 @@
                 The beauty of this skill for your child is that every new textbook
                 your child picks to read, he/she will be able to predict likely
                 questions that can come from the topic. This prediction capacity will
-                make your child will not to fail any exam again in their lifetime
+                make your child not to fail any exam again in their lifetime
                 unless they did not prepare for it. If your child can think like the
                 teacher, they will know the part of the textbook that any good teacher
                 will set questions from and focus more on those areas.
@@ -247,10 +263,10 @@
                 </div>
             </div>
             <div class="row center">
-                <div class="col s12 m6" style="margin-bottom: 20px;">
+                <!-- <div class="col s12 m6" style="margin-bottom: 20px;">
                     <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
-                </div>
-                <div class="col s12 m6">
+                </div> -->
+                <div class="col s12 ">
                     <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
                 </div>
             </div>
@@ -403,7 +419,7 @@
                 admission without bribe or sorting. We understand the condition of the
                 country and for that the JAMB bundle is not even 20k or 15k but just a
                 token of
-                <b class="red-text text-lighten-2">N10,000 and WAEC bundle is N15,000</b>
+                <b class="red-text text-lighten-2">&#8358;10,000 and WAEC bundle is &#8358;15,000</b>
             </p>
 
             <p>
@@ -437,13 +453,13 @@
         </div>
       </div> -->
             <div class="row center">
-                <div class="col s12 m4" style="margin-bottom: 20px;">
+                <!-- <div class="col s12 m4" style="margin-bottom: 20px;">
                     <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
-                </div>
-                <div class="col s12 m4" style="margin-bottom: 20px;">
+                </div> -->
+                <div class="col s12 m6" style="margin-bottom: 20px;">
                     <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m6">
                     <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Hard Copy</a>
                 </div>
             </div>
@@ -457,7 +473,7 @@
                 leave without ordering. Your child may get another one year to stay at
                 home or make you spend hundreds of thousands to bribe admission
                 officials unending for a problem 10k should have solved. So place your
-                order now and pay for your order to be arranged adnsent to you... Or
+                order now and pay for your order to be arranged and sent to you... Or
                 transfer to acct details below to get our ebook instantly on your
                 email and have the hardcopy sent out within 24 to 48hrs to you.
             </p>
@@ -500,11 +516,11 @@
                                     <select multiple id="sci_jamb_soft" name="bundle_jamb_sci[]">
 
                                         <option value="" disabled selected>Choose your Three Subject</option>
-                                        <option value="English" disabled>English</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Physics">Physics</option>
-                                        <option value="Biology">Biology</option>
+                                        <option name="English" value="1" disabled>English</option>
+                                        <option value="2">Mathematics</option>
+                                        <option value="3">Chemistry</option>
+                                        <option value="4">Physics</option>
+                                        <option value="5">Biology</option>
                                     </select>
                                 </div>
                                 <div class="input-field col s12 m12" id="art_jamb_soft">
@@ -542,8 +558,8 @@
                 <div class="modal-content">
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="contactform">
-                            <div class="card" style="text-align: center; color: red;">
-                                <h2>Prep50 Jamb Hard Copy</h2>
+                            <div class="card">
+                                <h2 class="red-text text-lighten-2 center">Prep50 Jamb Hard Copy</h2>
                                 <p class="red-text text-lighten-2 center">Please fill the following information</p>
                             </div>
                             <div class="row">
@@ -616,8 +632,8 @@
                 <div class="modal-content">
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="waecForm">
-                            <div class="card" style="text-align: center; color: red;">
-                                <h2>Prep50 Waec</h2>
+                            <div class="card">
+                                <h2 class="red-text text-lighten-2 center">Prep50 Waec</h2>
                                 <p class="red-text text-lighten-2 center">Please fill the following information</p>
                             </div>
                             <div class="row">
@@ -745,17 +761,43 @@
             //         alert('You can select upto 3 options only');
             //     }
             // });
-            $('#sci_jamb_soft').on('change', function() {
-                $('#art_jamb_soft').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three Subject');
+            // var arr = new Array();
+            // $("#sci_jamb_soft[multiple]").on('change',function() {
+            //     $('#art_jamb_soft').hide();
+            //     $(this).find("option:selected")
+            //     if ($(this).find("option:selected").length > 2 ) {
+            //         $(this).find("option").removeAttr("selected");
+            //         $(this).val(arr);
+            //     }
+            //     else {
+            //         arr = new Array();
+            //         $(this).find("option:selected").each(function(index, item) {
+            //             arr.push($(item).val());
+            //         });
+            //     }
+            // });
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
+            // $('#sci_jamb_soft').on('change', function() {
+            //     $('#art_jamb_soft').hide();
+            //     if ($("select option:selected").length > 3) {
+            //         $(this).removeAttr("selected", false);
+            //         $(this).removeAttr("disabled", true);
+            //         // alert('English already selected by default, So choose the remaing three Subject');
+
+            //     } else {
+            //         $(this).removeAttr("disabled", false)
+            //     }
+            // });
+            var last_valid_selection = null;
+        $('#sci_jamb_soft').change(function(event) {
+            $('#art_jamb_soft').hide();
+         if ($(this).val().length > 2) {
+           alert('You can only choose 2!');
+           $(this).val(last_valid_selection);
+         } else {
+           last_valid_selection = $(this).val();
+         }
+       });
             $('#art_jamb_soft').on('change', function() {
                 $('#sci_jamb_soft').hide();
                 if ($("select option:selected").length > 3) {
