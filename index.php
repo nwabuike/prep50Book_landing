@@ -1052,7 +1052,7 @@
                     //successful transaction
                     alert('Transaction was successful');
                     // sendEmailToPhp();
-                    window.location.href = "thanks.html";
+                    window.location.href = "thank-you.html";
 
                 },
                 onClose: function() {
@@ -1153,7 +1153,7 @@
                 callback: function(response) {
                     //successful transaction
                     alert('Transaction was successful');
-                    window.location.href = "thanks.html";
+                    window.location.href = "thank-you.html";
 
                 },
                 onClose: function() {
