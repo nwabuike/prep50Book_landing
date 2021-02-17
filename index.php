@@ -479,7 +479,7 @@
             </p>
 
             <!-- Modal Structure -->
-            <div id="modal1" class="modal">
+            <!-- <div id="modal1" class="modal">
                 <div class="modal-content">
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="contactform">
@@ -553,7 +553,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div id="modal2" class="modal">
                 <div class="modal-content">
                     <div class="row">
@@ -564,23 +564,23 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input name="fullname" id="fullname1" type="text" class="validate" required>
+                                    <input name="fullname1" id="fullname1" type="text" class="validate" required>
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone1" name="phone" type="text" class="validate" required>
+                                    <input id="phone1" name="phone1" type="text" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="email1" name="email" type="email" class="validate" required>
+                                    <input id="email1" name="email1" type="email" class="validate" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="address1" type="text" name="address" class="validate" required>
+                                    <input id="address1" type="text" name="address1" class="validate" required>
                                     <label for="address">Enter Your Full Address including the city and state</label>
                                 </div>
 
@@ -638,23 +638,23 @@
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input name="fullname" id="fullname2" type="text" class="validate" required>
+                                    <input name="fullname2" id="fullname2" type="text" class="validate" required>
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone2" name="phone" type="text" class="validate" required>
+                                    <input id="phone2" name="phone2" type="text" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="email2" name="email" type="email" class="validate" required>
+                                    <input id="email2" name="email2" type="email" class="validate" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="address2" type="text" name="address" class="validate" required>
+                                    <input id="address2" type="text" name="address2" class="validate" required>
                                     <label for="address">Enter Your Full Address including the city and state</label>
                                 </div>
 
@@ -933,15 +933,14 @@
             handler.openIframe(); //open the paystack's payment modal
 
         }
-
         function sendEmailToPhp() {
             $.post("./php/get_connection.php", {
-                    "fullname": $('input[name="fullname"]').val(),
-                    "email": $('input[name="email"]').val(),
-                    "phone": $('input[name="phone"]').val(),
-                    "address": $('input[name="address"]').val(),
-                    "bundle_jambSci": $('select[name="bundle_jamb_sci[]"]').val(),
-                    "bundle_jambArt": $('select[name="bundle_jamb_sci[]"]').val()
+                    "fullname": $('input[name="fullname1"]').val(),
+                    "email": $('input[name="email1"]').val(),
+                    "phone": $('input[name="phone1"]').val(),
+                    "address": $('input[name="address1"]').val(),
+                    "bundle_jambSci": $('select[name="bundle_jamb_hard_sci[]"]').val(),
+                    "bundle_jambArt": $('select[name="bundle_jamb_hard_art[]"]').val()
 
                 })
                 // .error(function(error) {});
@@ -950,47 +949,19 @@
                     $("#mail-status").show();
                     $('#loader-icon').hide();
                     if (response.type == "error") {
-                        $('#JambSoftBtn').show();
+                        $('#JambHardBtn').show();
                         $("#mail-status").attr("class", "error");
                     } else if (response.type == "message") {
-                        $('#JambSoftBtn').hide();
+                        $('#JambHardBtn').hide();
                         $("#mail-status").attr("class", "success");
-                        window.location.href = "thanks.html";
+                        // window.location.href = "thanks.html";
                     }
                     $("#mail-status").html(response.text);
                 });
         }
+       
 
-        function sendEmail() {
-            $.ajax({
-                url: "./php/get_connection.php",
-                type: "POST",
-                dataType: 'json',
-                data: {
-                    "fullname": $('input[name="fullname"]').val(),
-                    "email": $('input[name="email"]').val(),
-                    "phone": $('input[name="phone"]').val(),
-                    "address": $('input[name="address"]').val(),
-                    "bundle_waec": $('select[name="bundle_waec"]').val(),
-                    "bundle_jamb": $('select[name="bundle_jamb"]').val()
-                },
-                success: function(response) {
-                    $("#mail-status").show();
-                    $('#loader-icon').hide();
-                    if (response.type == "error") {
-                        $('#send-message').show();
-                        $("#mail-status").attr("class", "error");
-                    } else if (response.type == "message") {
-                        $('#send-message').hide();
-                        $("#mail-status").attr("class", "success");
-                        window.location.href = "thanks.html";
-                    }
-                    $("#mail-status").html(response.text);
-                },
-                error: function() {}
-            });
-        }
-
+       
         function onSubmitJambHard() {
             $('#JambHardBtn').on('click', function(evt) {
                 $("#mail-status").hide();
@@ -1016,8 +987,10 @@
             console.log(address1);
             console.log(phone1);
             console.log(email1);
+            console.log(jamb_Hard_sci);
+            console.log(jamb_Hard_art);
             var handler = PaystackPop.setup({
-                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
+                key: 'pk_test_1f4efdc6023606badb324eb3273687f2dc209762', //put your public key here
                 email: email1, //put your customer's email here
                 amount: 1000000, //amount the customer is supposed to pay
                 metadata: {
@@ -1051,7 +1024,7 @@
                 callback: function(response) {
                     //successful transaction
                     alert('Transaction was successful');
-                    // sendEmailToPhp();
+                    sendEmailToPhp();
                     window.location.href = "thank-you.html";
 
                 },
@@ -1119,7 +1092,7 @@
             console.log(waec_Hard_sci);
             console.log(waec_Hard_art);
             var handler = PaystackPop.setup({
-                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
+                key: 'pk_test_1f4efdc6023606badb324eb3273687f2dc209762', //put your public key here
                 email: email2, //put your customer's email here
                 amount: 1500000, //amount the customer is supposed to pay
                 metadata: {
@@ -1153,6 +1126,7 @@
                 callback: function(response) {
                     //successful transaction
                     alert('Transaction was successful');
+                    sendToWaec();
                     window.location.href = "thank-you.html";
 
                 },
@@ -1164,33 +1138,31 @@
             });
             handler.openIframe();
         }
-        function sendEmail() {
-            $.ajax({
-                url: "./php/waec.php",
-                type: "POST",
-                dataType: 'json',
-                data: {
-                    "fullname": $('input[name="fullname"]').val(),
-                    "email": $('input[name="email"]').val(),
-                    "phone": $('input[name="phone"]').val(),
-                    "address": $('input[name="address"]').val(),
-                    "bundle_waec": $('select[name="bundle_waec[]"]').val(),
-                },
-                success: function(response) {
+        function sendToWaec() {
+            $.post("./php/get_connection.php", {
+                    "fullname": $('input[name="fullname2"]').val(),
+                    "email": $('input[name="email2"]').val(),
+                    "phone": $('input[name="phone2"]').val(),
+                    "address": $('input[name="address2"]').val(),
+                    "bundle_jambSci": $('select[name="bundle_waec_hard_sci[]"]').val(),
+                    "bundle_jambArt": $('select[name="bundle_waec_hard_art[]"]').val()
+
+                })
+                // .error(function(error) {});
+                .done(function(response) {
+                    console.log(response);
                     $("#mail-status").show();
                     $('#loader-icon').hide();
                     if (response.type == "error") {
-                        $('#send-message').show();
+                        $('#JambSoftBtn').show();
                         $("#mail-status").attr("class", "error");
                     } else if (response.type == "message") {
-                        $('#send-message').hide();
+                        $('#JambSoftBtn').hide();
                         $("#mail-status").attr("class", "success");
                         window.location.href = "thanks.html";
                     }
                     $("#mail-status").html(response.text);
-                },
-                error: function() {}
-            });
+                });
         }
     </script>
 </body>
