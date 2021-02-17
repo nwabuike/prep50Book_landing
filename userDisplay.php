@@ -6,44 +6,52 @@ $result = mysqli_query($conn,"SELECT * FROM users");
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/style.css"
-      media="screen,projection"
-    />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prep50 | Books</title>
 
-    <!-- <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
   </head>
   <body>
-    <nav style="margin-bottom: 20px; margin-top: 10px">
-      <div class="nav-wrapper">
-        <h3 class="center">Prep50 Books</h3>
-      </div>
+  <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo red-text text-lighten-2">Prep50</a>
+        </div>
     </nav>
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+            <p class="white-text">Smash Your Jamb With Prep50 Past Questions</p>
+        </div>
+        <div class="carousel-item red white-text" href="#one!">
+            <h2>Prep50 Books</h2>
+            <p class="white-text">This is your Where Your success is Assured</p>
+        </div>
+        <div class="carousel-item amber white-text" href="#two!">
+            <h2>Prep50 Books</h2>
+            <p class="white-text">This is your Where Your success is Assured</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+            <h2>Prep50 Books</h2>
+            <p class="white-text">This is your Where Your success is Assured</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+            <h2>Prep50 Books</h2>
+            <p class="white-text">This is your Where Your success is Assured</p>
+        </div>
+    </div>
+    <br>
     <?php
 if (mysqli_num_rows($result) >
     0) { ?>
     <div class="container" style="margin-bottom: 50px">
-      <div class="">
-        <table class="table">
+      <div class="section">
+        <table class="striped">
           <thead>
             <tr>
               <th data-field="id">S/N</th>
@@ -91,5 +99,14 @@ $i++;
         <div class="container">© 2021 Copyright Prep50Books</div>
       </div>
     </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true
+            });
+    });
+    </script>
   </body>
 </html>

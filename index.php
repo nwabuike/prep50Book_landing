@@ -990,7 +990,7 @@
             console.log(jamb_Hard_sci);
             console.log(jamb_Hard_art);
             var handler = PaystackPop.setup({
-                key: 'pk_test_1f4efdc6023606badb324eb3273687f2dc209762', //put your public key here
+                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email1, //put your customer's email here
                 amount: 1000000, //amount the customer is supposed to pay
                 metadata: {
@@ -1092,7 +1092,7 @@
             console.log(waec_Hard_sci);
             console.log(waec_Hard_art);
             var handler = PaystackPop.setup({
-                key: 'pk_test_1f4efdc6023606badb324eb3273687f2dc209762', //put your public key here
+                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email2, //put your customer's email here
                 amount: 1500000, //amount the customer is supposed to pay
                 metadata: {
