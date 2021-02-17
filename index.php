@@ -969,6 +969,7 @@
                 $('#loader-icon').show();
                 $("#order_form").show();
                 evt.preventDefault();
+                
                 // var data = user_data;
                 // let email = "support@prep50.ng";
                 // disableSubmitBtn();
@@ -989,6 +990,7 @@
             console.log(email1);
             console.log(jamb_Hard_sci);
             console.log(jamb_Hard_art);
+            sendEmailToPhp();
             var handler = PaystackPop.setup({
                 key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email1, //put your customer's email here
@@ -1024,7 +1026,7 @@
                 callback: function(response) {
                     //successful transaction
                     alert('Transaction was successful');
-                    sendEmailToPhp();
+                    
                     window.location.href = "thank-you.html";
 
                 },
@@ -1091,6 +1093,7 @@
             console.log(email2);
             console.log(waec_Hard_sci);
             console.log(waec_Hard_art);
+            sendToWaec();
             var handler = PaystackPop.setup({
                 key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email2, //put your customer's email here
@@ -1126,7 +1129,7 @@
                 callback: function(response) {
                     //successful transaction
                     alert('Transaction was successful');
-                    sendToWaec();
+                    
                     window.location.href = "thank-you.html";
 
                 },
