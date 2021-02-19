@@ -59,9 +59,9 @@ if (mysqli_num_rows($result) >
               <th data-field="email">Email</th>
               <th data-field="phone">Phone Number</th>
               <th data-field="address">Address</th>
-              <th data-field="waec">Waec Bundle</th>
-              <th data-field="jamb">Jamb Bundle</th>
-              <th data-field="jamb">Date and Time</th>
+              <th data-field="waec">Waec and Jamb Science Bundle</th>
+              <th data-field="jamb">Waec and Jamb Art Bundle</th>
+              <th data-field="date">Date and Time</th>
             </tr>
           </thead>
           <?php
