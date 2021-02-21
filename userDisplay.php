@@ -46,11 +46,13 @@ $result = mysqli_query($conn,"SELECT * FROM users");
         </div>
     </div>
     <br>
-    <?php
+    <tr>
+       <!-- //PHP foreach Loop -->
+       <div class="container" style="margin-bottom: 50px">
+      <div class="section">
+      <?php
 if (mysqli_num_rows($result) >
     0) { ?>
-    <div class="container" style="margin-bottom: 50px">
-      <div class="section">
         <table class="striped">
           <thead>
             <tr>
@@ -64,36 +66,32 @@ if (mysqli_num_rows($result) >
               <th data-field="date">Date and Time</th>
             </tr>
           </thead>
-          <?php
-$i=0;
-while($row = mysqli_fetch_array($result)) {
-?>
-
           <tbody>
+          
+          <?php foreach ($result as $bicycle){ ?>
             <tr>
-              <td><?php echo $row["id"]; ?></td>
-              <td><?php echo $row["fullname"]; ?></td>
-              <td><?php echo $row["email"]; ?>r</td>
-              <td><?php echo $row["phone"]; ?></td>
-              <td><?php echo $row["address"]; ?></td>
-              <td><?php echo $row["jambSoftSciBundle"]; ?></td>
-              <td><?php echo $row["jambSoftArtBundle"]; ?></td>
-              <td><?php echo $row["created_at"]; ?></td>
-            </tr>
+	 <td> <?php echo $bicycle['id']; ?> </td>
+	 <td> <?php echo $bicycle['fullname']; ?> </td>
+	 <td> <?php echo $bicycle['address']; ?> </td>
+	 <td> <?php echo $bicycle['phone']; ?> </td>
+	 <td> <?php echo $bicycle['email']; ?> </td>
+	 <td> <?php echo $bicycle['jambSoftSciBundle']; ?> </td>
+	 <td> <?php echo $bicycle['jambSoftArtBundle']; ?> </td>
+	 <td> <?php echo $bicycle['created_at']; ?> </td> 
+      </tr>
+	<?php } ?>
           </tbody>
-          <?php
-$i++;
-}
-?>
-        </table>
+          </table>
         <?php
             }
             else{
                 echo "<h3>No result found</h3>";
             }
-            ?>
+            ?> 
       </div>
     </div>
+
+    
     <footer class="page-footer">
       <div class="footer-copyright">
         <div class="container">© 2021 Copyright Prep50Books</div>
