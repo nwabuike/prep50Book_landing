@@ -477,7 +477,7 @@
                 transfer to acct details below to get our ebook instantly on your
                 email and have the hardcopy sent out within 24 to 48hrs to you.
             </p>
-
+            
             <!-- Modal Structure -->
             <!-- <div id="modal1" class="modal">
                 <div class="modal-content">
@@ -741,7 +741,108 @@
             </div>
         </div>
     </div>
+    <div class="container">
+                <div class="section">
+                    <div class="row">
+                        <form class="col s12" method="POST" name="contactform" id="contactform">
+                            <div class="card">
+                                <h5 class="red-text text-lighten-2 center">Prep50 Jamb And Waec Past Questions</h5>
+                                <p class="red-text text-lighten-2 center">Please fill the following information</p>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input name="fullname1" id="fullname1" type="text" class="validate" required>
+                                    <label for="full_name">Full Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="phone1" name="phone1" type="text" class="validate" required>
+                                    <label for="phone_number">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email1" name="email1" type="email" class="validate" required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="address1" type="text" name="address1" class="validate" required>
+                                    <label for="address">Enter Your Full Address including the city and state</label>
+                                </div>
 
+                            </div>
+                            
+                            <div class="row">
+                                <div class="input-field col s12 m6" id="sci_jamb_hard">
+                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
+                                    <select multiple id="sci_jamb_hard" name="bundle_jamb_hard_sci[]">
+                                        <option value="" disabled selected>Choose your Three Subject</option>
+                                        <option value="English" disabled>English</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Biology">Biology</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s12 m6" id="art_jamb_hard">
+                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
+                                    <select multiple id="art_jamb_hard" name="bundle_jamb_hard_art[]">
+                                        <option value="" disabled selected>Choose your Three Subject</option>
+                                        <option value="English" disabled>English</option>
+                                        <option value="Government">Government</option>
+                                        <option value="Lit in Eng.">Lit in Eng.(combine Jamb & Waec)</option>
+                                        <option value="Economics">Economics</option>
+                                        <option value="C.R.S">C.R.S</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m6" id="sci_waec_hard">
+                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
+                                    <select multiple id="sci_waec_hard" name="bundle_waec_hard_sci[]">
+                                        <option value="" disabled selected>Choose your Five Subject</option>
+                                        <option value="English" disabled>English</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                        <option value="Physics">Physics</option>
+                                        <option value="Biology">Biology</option>
+                                        <option value="Civic and Trade Subjects">Civic and Trade Subjects</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s12 m6" id="art_waec_hard">
+                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
+                                    <select multiple id="art_waec_hard" name="bundle_waec_hard_art[]">
+                                        <option value="" disabled selected>Choose your Five Subject</option>
+                                        <option value="English" disabled>English</option>
+                                        <option value="Mathematics">Mathematics</option>
+                                        <option value="Government">Government</option>
+                                        <option value="Lit in Eng.">Lit in Eng.(combine Jamb & Waec)</option>
+                                        <option value="Economics">Economics</option>
+                                        <option value="C.R.S">C.R.S</option>
+                                        <option value="Civic and Trade Subjects">Civic and Trade Subjects</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card">
+                                    <div class="input-field col s12" id="mail-status"> </div>
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <button class="btn waves-effect waves-light center" id="JambHardBtn" type="submit" name="action">
+                                    Submit
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="progress" id="loader-icon" style="display:none; ">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -973,7 +1074,9 @@
                 // var data = user_data;
                 // let email = "support@prep50.ng";
                 // disableSubmitBtn();
-                payWithPaystackJambHard();
+                // payWithPaystackJambHard();
+                sendEmailToPhp();
+                window.location.href = "thank-you.html";
             });
         }
 
@@ -1027,7 +1130,7 @@
                     //successful transaction
                     alert('Transaction was successful');
                     
-                    window.location.href = "thank-you.html";
+                    
 
                 },
                 onClose: function() {
@@ -1077,7 +1180,9 @@
                 // var data = user_data;
                 // let email = "support@prep50.ng";
                 // disableSubmitBtn();
-                payWithPaystackWaec();
+                // payWithPaystackWaec();
+                sendToWaec();
+                window.location.href = "thank-you.html";
             });
         }
 
@@ -1093,7 +1198,7 @@
             console.log(email2);
             console.log(waec_Hard_sci);
             console.log(waec_Hard_art);
-            sendToWaec();
+            
             var handler = PaystackPop.setup({
                 key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
                 email: email2, //put your customer's email here
