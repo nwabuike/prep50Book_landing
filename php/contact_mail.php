@@ -1,14 +1,14 @@
 <?php
-$toEmail = "nwabuikeanthony@gmail.com";
+$toEmail = "deaconscbt@gmail.com";
 $mailHeaders = "From: " . $user_name . "<" . $user_email . ">\r\n";
 $mailBody = "User Name: " . $user_name . "\n";
 $mailBody .= "User Email: " . $user_email . "\n";
 $mailBody .= "Phone: " . $user_phone . "\n";
-$mailBody .= "Address: " . $user_state . "\n";
-$mailBody .= "Bundle-Waec: " . $user_bundle_jammb_sci . "\n";
-$mailBody .= "Bundle-Jamb: " . $user_bundle_jammb_art . "\n";
-$mailBody .= "Bundle-Waec: " . $user_bundle_waec_art . "\n";
-$mailBody .= "Bundle-Jamb: " . $user_bundle_waec_sci . "\n";
+$mailBody .= "Address: " . $user_address . "\n";
+$mailBody .= "Bundle-Jamb-sci: " . $user_bundle_jamb_sci . "\n";
+$mailBody .= "Bundle-Jamb-Art: " . $user_bundle_jamb_art . "\n";
+$mailBody .= "Bundle-Waec-Sci: " . $user_bundle_waec_art . "\n";
+$mailBody .= "Bundle-WaecS-Art: " . $user_bundle_waec_sci . "\n";
 // $file = "files/codexworld.pdf";
 
 if (mail($toEmail, "Book Order form '.$user_name .'", $mailBody, $mailHeaders)) {
