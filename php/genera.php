@@ -24,7 +24,7 @@ VALUES('".$user_name."', '".$user_email."', '".$user_phone."', '".$user_address.
     die($output);
         // die('There was an error running the query [' . $conn->error . ']');
     } else {
-        // require_once("./contact_mail.php");
+        require_once("contact_mail.php");
         // require_once("./Emailing.php");
         $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_name .', thank you for the message. We will get back to you shortly.'));
     die($output);

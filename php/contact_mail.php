@@ -1,15 +1,17 @@
 <?php
-$toEmail = $user_email;
+$toEmail = "deaconscbt@gmail.com";
 $mailHeaders = "From: " . $user_name . "<" . $user_email . ">\r\n";
 $mailBody = "User Name: " . $user_name . "\n";
 $mailBody .= "User Email: " . $user_email . "\n";
 $mailBody .= "Phone: " . $user_phone . "\n";
 $mailBody .= "Address: " . $user_state . "\n";
-$mailBody .= "Bundle-Waec: " . $user_bundle_w . "\n";
-$mailBody .= "Bundle-Jamb: " . $user_bundle_j . "\n";
+$mailBody .= "Bundle-Waec: " . $user_bundle_jammb_sci . "\n";
+$mailBody .= "Bundle-Jamb: " . $user_bundle_jammb_art . "\n";
+$mailBody .= "Bundle-Waec: " . $user_bundle_waec_art . "\n";
+$mailBody .= "Bundle-Jamb: " . $user_bundle_waec_sci . "\n";
 // $file = "files/codexworld.pdf";
 
-if (mail($toEmail, "Book Order", $mailBody, $mailHeaders)) {
+if (mail($toEmail, "Book Order form '.$user_name .'", $mailBody, $mailHeaders)) {
     // $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_name .', thank you for the message. We will get back to you shortly.'));
     // die($output);
     echo "Thank you";
