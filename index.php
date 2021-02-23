@@ -744,39 +744,40 @@
     <div class="container">
                 <div class="section">
                     <div class="row">
-                        <form class="col s12" method="POST" name="contactform" id="contactform">
+                        <form class="col s12" method="POST" name="genForm" id="genForm">
                             <div class="card">
                                 <h5 class="red-text text-lighten-2 center">Prep50 Jamb And Waec Past Questions</h5>
                                 <p class="red-text text-lighten-2 center">Please fill the following information</p>
                             </div>
                             <div class="row">
                                 <div class="input-field col s6">
-                                    <input name="fullname1" id="fullname1" type="text" class="validate" required>
+                                    <input name="fullname" id="fullname" type="text" class="validate" required>
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone1" name="phone1" type="text" class="validate" required>
+                                    <input id="phone" name="phone" type="text" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="email1" name="email1" type="email" class="validate" required>
+                                    <input id="email" name="email" type="email" class="validate" required>
                                     <label for="email">Email</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="address1" type="text" name="address1" class="validate" required>
+                                    <input id="address" type="text" name="address" class="validate" required>
                                     <label for="address">Enter Your Full Address including the city and state</label>
                                 </div>
 
                             </div>
                             
                             <div class="row">
-                                <div class="input-field col s12 m6" id="sci_jamb_hard">
+                                <h4 class="red-text text-lighten-2">Jamb Bundle</h4>
+                                <div class="input-field col s12 m6" id="sci_jamb">
                                     <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
-                                    <select multiple id="sci_jamb_hard" name="bundle_jamb_hard_sci[]">
+                                    <select multiple id="sci_jamb_hard" name="bundle_jamb_sci[]">
                                         <option value="" disabled selected>Choose your Three Subject</option>
                                         <option value="English" disabled>English</option>
                                         <option value="Mathematics">Mathematics</option>
@@ -785,9 +786,9 @@
                                         <option value="Biology">Biology</option>
                                     </select>
                                 </div>
-                                <div class="input-field col s12 m6" id="art_jamb_hard">
+                                <div class="input-field col s12 m6" id="art_jamb">
                                     <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
-                                    <select multiple id="art_jamb_hard" name="bundle_jamb_hard_art[]">
+                                    <select multiple id="art_jamb_hard" name="bundle_jamb_art[]">
                                         <option value="" disabled selected>Choose your Three Subject</option>
                                         <option value="English" disabled>English</option>
                                         <option value="Government">Government</option>
@@ -798,9 +799,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="input-field col s12 m6" id="sci_waec_hard">
+                                <h4 class="red-text text-lighten-2">Waec Bundle</h4>
+                                <div class="input-field col s12 m6" id="sci_waec">
                                     <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
-                                    <select multiple id="sci_waec_hard" name="bundle_waec_hard_sci[]">
+                                    <select multiple id="sci_waec_hard" name="bundle_waec_sci[]">
                                         <option value="" disabled selected>Choose your Five Subject</option>
                                         <option value="English" disabled>English</option>
                                         <option value="Mathematics">Mathematics</option>
@@ -810,9 +812,9 @@
                                         <option value="Civic and Trade Subjects">Civic and Trade Subjects</option>
                                     </select>
                                 </div>
-                                <div class="input-field col s12 m6" id="art_waec_hard">
+                                <div class="input-field col s12 m6" id="art_waec">
                                     <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
-                                    <select multiple id="art_waec_hard" name="bundle_waec_hard_art[]">
+                                    <select multiple id="art_waec_hard" name="bundle_waec_art[]">
                                         <option value="" disabled selected>Choose your Five Subject</option>
                                         <option value="English" disabled>English</option>
                                         <option value="Mathematics">Mathematics</option>
@@ -830,7 +832,7 @@
                                 </div>
                             </div>
                             <div class="row center">
-                                <button class="btn waves-effect waves-light center" id="JambHardBtn" type="submit" name="action">
+                                <button class="btn waves-effect waves-light center" id="Btn" type="submit" name="submit">
                                     Submit
                                     <i class="material-icons right">send</i>
                                 </button>
@@ -846,14 +848,15 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script> -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('select').material_select();
             onSubmitJambSoft();
             onSubmitJambHard();
+            onSubmit();
             onSubmitWaec();
 
             // $("#sci_jamb_hard").change(function() {
@@ -945,6 +948,51 @@
             });
             $('#art_waec_hard').on('change', function() {
                 $('#sci_waec_hard').hide();
+                if ($("select option:selected").length > 3) {
+                    $(this).removeAttr("selected", false);
+                    $(this).removeAttr("disabled", true);
+                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+
+                } else {
+                    $(this).removeAttr("disabled", false)
+                }
+            });
+//general form
+            $('#sci_jamb').on('change', function() {
+                $('#art_jamb').hide();
+                if ($("select option:selected").length > 3) {
+                    $(this).removeAttr("selected", false);
+                    $(this).removeAttr("disabled", true);
+                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+
+                } else {
+                    $(this).removeAttr("disabled", false)
+                }
+            });
+            $('#art_jamb').on('change', function() {
+                $('#sci_jamb').hide();
+                if ($("select option:selected").length > 3) {
+                    $(this).removeAttr("selected", false);
+                    $(this).removeAttr("disabled", true);
+                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+
+                } else {
+                    $(this).removeAttr("disabled", false)
+                }
+            });
+            $('#sci_waec').on('change', function() {
+                $('#art_waec').hide();
+                if ($("select option:selected").length > 3) {
+                    $(this).removeAttr("selected", false);
+                    $(this).removeAttr("disabled", true);
+                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+
+                } else {
+                    $(this).removeAttr("disabled", false)
+                }
+            });
+            $('#art_waec').on('change', function() {
+                $('#sci_waec').hide();
                 if ($("select option:selected").length > 3) {
                     $(this).removeAttr("selected", false);
                     $(this).removeAttr("disabled", true);
@@ -1061,7 +1109,50 @@
                 });
         }
        
+        function onSubmit() {
+            $('#Btn').on('click', function(evt) {
+                $("#mail-status").hide();
+                $('#send-message').hide();
+                $('#loader-icon').show();
+                $("#genForm").show();
+                evt.preventDefault();
+                
+                // var data = user_data;
+                // let email = "support@prep50.ng";
+                // disableSubmitBtn();
+                // payWithPaystackJambHard();
+                sendToPhp();
+                window.location.href = "thank-you.html";
+            });
+        }
+        function sendToPhp() {
+            $.post("./php/genera.php", {
+                    "fullname": $('input[name="fullname"]').val(),
+                    "email": $('input[name="email"]').val(),
+                    "phone": $('input[name="phone"]').val(),
+                    "address": $('input[name="address"]').val(),
+                    "bundle_jambSci": $('select[name="bundle_jamb_sci[]"]').val(),
+                    "bundle_jambArt": $('select[name="bundle_jamb_art[]"]').val(),
+                    "bundle_waecSci": $('select[name="bundle_waec_sci[]"]').val(),
+                    "bundle_waecArt": $('select[name="bundle_waec_art[]"]').val()
 
+                })
+                // .error(function(error) {});
+                .done(function(response) {
+                    console.log(response);
+                    $("#mail-status").show();
+                    $('#loader-icon').hide();
+                    if (response.type == "error") {
+                        $('#JambHardBtn').show();
+                        $("#mail-status").attr("class", "error");
+                    } else if (response.type == "message") {
+                        $('#JambHardBtn').hide();
+                        $("#mail-status").attr("class", "success");
+                        // window.location.href = "thanks.html";
+                    }
+                    $("#mail-status").html(response.text);
+                });
+        }
        
         function onSubmitJambHard() {
             $('#JambHardBtn').on('click', function(evt) {
