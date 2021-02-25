@@ -568,7 +568,7 @@
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone1" name="phone1" type="text" class="validate" required>
+                                    <input id="phone1" name="phone1" type="tel" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
@@ -642,7 +642,7 @@
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone2" name="phone2" type="text" class="validate" required>
+                                    <input id="phone2" name="phone2" type="tel" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
@@ -755,7 +755,7 @@
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field col s6">
-                                    <input id="phone" name="phone" type="text" class="validate" required>
+                                    <input id="phone" name="phone" type="tel" class="validate" required>
                                     <label for="phone_number">Phone Number</label>
                                 </div>
                             </div>
