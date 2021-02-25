@@ -417,15 +417,15 @@
                 fishery or Plant science in school. But we will not charge you 150k
                 because our main aim is not to make money but to help your child gain
                 admission without bribe or sorting. We understand the condition of the
-                country and for that the JAMB bundle is not even 20k or 15k but just a
+                country and for that the JAMB bundle is not even &#8358;20,000 or &#8358;15,000 but just a
                 token of
                 <b class="red-text text-lighten-2">&#8358;10,000 and WAEC bundle is &#8358;15,000</b>
             </p>
 
             <p>
                 If your child is still SS3 class and you decide to buy both bundles,
-                we will give you a huge N2000 naira discount... So instead of 25k you
-                only pay 22k...
+                we will give you a huge &#8358;2,500 naira discount... So instead of &#8358;25,000 you
+                only pay &#8358;22,500...
             </p>
 
             <p>
@@ -714,11 +714,11 @@
                     <h3><i class="mdi-content-send red-text"></i></h3>
                     <h4 class="red-text text-lighten-2 center">Contact Us</h4>
                     <!-- <p class="left-align light"> -->
-                    <ul class="red-text text-lighten-2">
+                    <!-- <ul class="red-text text-lighten-2">
                         <li><b>Pay before delivery to:</b></li>
                         <li><b>Deacons Educational Consult & Data Centre</b></li>
                         <li><b>Zenith Bank - 1016993496.</b></li>
-                    </ul>
+                    </ul> -->
 
                     <h5 class="red-text text-lighten-2">Procedure:</h5>
                     <p>
