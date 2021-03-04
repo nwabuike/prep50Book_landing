@@ -61,10 +61,8 @@ if (mysqli_num_rows($result) >
               <th data-field="email">Email</th>
               <th data-field="phone">Phone Number</th>
               <th data-field="address">Address</th>
-              <th data-field="waec">Jamb Science Bundle</th>
-              <th data-field="jamb">Jamb Art Bundle</th>
-              <th data-field="waec">Waec Science Bundle</th>
-              <th data-field="waec">Waec Art Bundle</th>
+              <th data-field="waec">Jamb Bundle</th>
+              <th data-field="waec">Waec Bundle</th>
               <th data-field="date">Date and Time</th>
             </tr>
           </thead>
@@ -78,9 +76,7 @@ if (mysqli_num_rows($result) >
 	 <td> <?php echo $bicycle['phone']; ?> </td>
 	 <td> <?php echo $bicycle['email']; ?> </td>
 	 <td> <?php echo $bicycle['jambSoftSciBundle']; ?> </td>
-	 <td> <?php echo $bicycle['jambSoftArtBundle']; ?> </td>
    <td> <?php echo $bicycle['waecSoftSciBundle']; ?> </td>
-	 <td> <?php echo $bicycle['waecSoftArtBundle']; ?> </td>
 	 <td> <?php echo $bicycle['created_at']; ?> </td> 
       </tr>
 	<?php } ?>

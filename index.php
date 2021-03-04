@@ -250,6 +250,10 @@
                     <h5 class="red-text">Physics</h5>
                 </div>
                 <div class="col s6 m4">
+                    <img class="responsive-img" src="img/chem_jamb.jpeg" />
+                    <h5 class="red-text">Chemistry</h5>
+                </div>
+                <div class="col s6 m4">
                     <img class="responsive-img" src="img/lit_ssce.jpg" />
                     <h5 class="red-text">Literature In Eng.</h5>
                 </div>
@@ -267,7 +271,7 @@
                     <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
                 </div> -->
                 <div class="col s12 ">
-                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
+                    <a id="download-button" href="#form" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Bundle</a>
                 </div>
             </div>
         </div>
@@ -320,7 +324,7 @@
 
             <div class="row center">
                 <div class="col s12 m12">
-                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Hard Copy</a>
+                    <a href="#form" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Bundle</a>
                 </div>
             </div>
         </div>
@@ -457,10 +461,10 @@
                     <a id="download-button" href="#modal1" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Soft Copy</a>
                 </div> -->
                 <div class="col s12 m6" style="margin-bottom: 20px;">
-                    <a id="download-button" href="#modal2" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Hard Copy</a>
+                    <a id="download-button" href="#form" class="btn-large waves-effect modal-trigger waves-light red lighten-1">Buy Jamb Bundle</a>
                 </div>
                 <div class="col s12 m6">
-                    <a href="#modal3" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Hard Copy</a>
+                    <a href="#form" id="download-button" class="btn-large modal-trigger waves-effect waves-light red lighten-1">Buy Waec Bundle</a>
                 </div>
             </div>
             <br>
@@ -554,7 +558,7 @@
                     </div>
                 </div>
             </div> -->
-            <div id="modal2" class="modal">
+            <!-- <div id="modal2" class="modal">
                 <div class="modal-content">
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="contactform">
@@ -592,9 +596,7 @@
                                         <option value="" disabled selected>Choose your Three Subject</option>
                                         <option value="English" disabled>English</option>
                                         <option value="Mathematics">Mathematics</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Physics">Physics</option>
-                                        <option value="Biology">Biology</option>
+                                        
                                     </select>
                                 </div>
                                 <div class="input-field col s12 m12" id="art_jamb_hard">
@@ -627,8 +629,8 @@
                     </div>
                 </div>
 
-            </div>
-            <div id="modal3" class="modal">
+            </div> -->
+            <!-- <div id="modal3" class="modal">
                 <div class="modal-content">
                     <div class="row">
                         <form class="col s12" method="POST" name="contactform" id="waecForm">
@@ -703,7 +705,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -741,7 +743,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="form">
                 <div class="section">
                     <div class="row">
                         <form class="col s12" method="POST" name="genForm" id="genForm">
@@ -774,56 +776,25 @@
                             </div>
                             
                             <div class="row">
+                                <div class="col s12 m6">
                                 <h4 class="red-text text-lighten-2">Jamb Bundle</h4>
-                                <div class="input-field col s12 m6" id="sci_jamb">
-                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
-                                    <select multiple id="sci_jamb_hard" name="bundle_jamb_sci[]">
-                                        <option value="" disabled selected>Choose your Three Subject</option>
-                                        <option value="English" disabled>English</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Physics">Physics</option>
-                                        <option value="Biology">Biology</option>
+                                <div>
+                                    <select id="sci_waec_hard" name="bundle_jamb_bundle">
+                                        <option value="" disabled selected>Choose your Jamb Bundle</option>
+                                        <option value="jambScienceBundle">Science Bundle &#8358;10,000</option>
+                                        <option value="jambArtBundle">Art Bundle &#8358;10,000</option>
                                     </select>
                                 </div>
-                                <div class="input-field col s12 m6" id="art_jamb">
-                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
-                                    <select multiple id="art_jamb_hard" name="bundle_jamb_art[]">
-                                        <option value="" disabled selected>Choose your Three Subject</option>
-                                        <option value="English" disabled>English</option>
-                                        <option value="Government">Government</option>
-                                        <option value="Lit in Eng.">Lit in Eng.(combine Jamb & Waec)</option>
-                                        <option value="Economics">Economics</option>
-                                        <option value="C.R.S">C.R.S</option>
+                                </div>
+                                <div class="col s12 m6">
+                                <h4 class="red-text text-lighten-2">Waec Bundle </h4>
+                                <div>
+                                    <select id="sci_waec_hard" name="bundle_waec_bundle">
+                                        <option value="" disabled selected>Choose your Waec Bundle</option>
+                                        <option value="waecScienceBundle">Science Bundle &#8358;15,000</option>
+                                        <option value="waecArtBundle">Art Bundle <b class="red-text text-lighten-2">&#8358;15,000</b></option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <h4 class="red-text text-lighten-2">Waec Bundle</h4>
-                                <div class="input-field col s12 m6" id="sci_waec">
-                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Science Bundle Hard Copy</h5>
-                                    <select multiple id="sci_waec_hard" name="bundle_waec_sci[]">
-                                        <option value="" disabled selected>Choose your Five Subject</option>
-                                        <option value="English" disabled>English</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="Chemistry">Chemistry</option>
-                                        <option value="Physics">Physics</option>
-                                        <option value="Biology">Biology</option>
-                                        <option value="Civic and Trade Subjects">Civic and Trade Subjects</option>
-                                    </select>
-                                </div>
-                                <div class="input-field col s12 m6" id="art_waec">
-                                    <h5 class="red-text text-lighten-2" style="font-size: 20px;">Art Bundle Hard Copy</h5>
-                                    <select multiple id="art_waec_hard" name="bundle_waec_art[]">
-                                        <option value="" disabled selected>Choose your Five Subject</option>
-                                        <option value="English" disabled>English</option>
-                                        <option value="Mathematics">Mathematics</option>
-                                        <option value="Government">Government</option>
-                                        <option value="Lit in Eng.">Lit in Eng.(combine Jamb & Waec)</option>
-                                        <option value="Economics">Economics</option>
-                                        <option value="C.R.S">C.R.S</option>
-                                        <option value="Civic and Trade Subjects">Civic and Trade Subjects</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="row">
@@ -845,7 +816,14 @@
                 </div>
 
             </div>
-
+            <footer class="page-footer">
+       
+       <div class="footer-copyright">
+         <div class="container">
+         © 2021 Copyright Prep50Books. Powered by Daecons Educational consult & Data center and Deacons Digital Solutions ltd.
+         </div>
+       </div>
+     </footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
@@ -892,116 +870,116 @@
             //         $(this).removeAttr("disabled", false)
             //     }
             // });
-            var last_valid_selection = null;
-        $('#sci_jamb_soft').change(function(event) {
-            $('#art_jamb_soft').hide();
-         if ($(this).val().length > 2) {
-           alert('You can only choose 2!');
-           $(this).val(last_valid_selection);
-         } else {
-           last_valid_selection = $(this).val();
-         }
-       });
-            $('#art_jamb_soft').on('change', function() {
-                $('#sci_jamb_soft').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three Subject');
+//             var last_valid_selection = null;
+//         $('#sci_jamb_soft').change(function(event) {
+//             $('#art_jamb_soft').hide();
+//          if ($(this).val().length > 2) {
+//            alert('You can only choose 2!');
+//            $(this).val(last_valid_selection);
+//          } else {
+//            last_valid_selection = $(this).val();
+//          }
+//        });
+//             $('#art_jamb_soft').on('change', function() {
+//                 $('#sci_jamb_soft').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing three Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#sci_jamb_hard').on('change', function() {
-                $('#art_jamb_hard').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#sci_jamb_hard').on('change', function() {
+//                 $('#art_jamb_hard').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing three(3) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#art_jamb_hard').on('change', function() {
-                $('#sci_jamb_hard').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#art_jamb_hard').on('change', function() {
+//                 $('#sci_jamb_hard').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing three(3) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#sci_waec_hard').on('change', function() {
-                $('#art_waec_hard').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#sci_waec_hard').on('change', function() {
+//                 $('#art_waec_hard').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing Five(5) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#art_waec_hard').on('change', function() {
-                $('#sci_waec_hard').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#art_waec_hard').on('change', function() {
+//                 $('#sci_waec_hard').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing Five(5) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-//general form
-            $('#sci_jamb').on('change', function() {
-                $('#art_jamb').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+// //general form
+//             $('#sci_jamb').on('change', function() {
+//                 $('#art_jamb').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing three(3) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#art_jamb').on('change', function() {
-                $('#sci_jamb').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing three(3) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#art_jamb').on('change', function() {
+//                 $('#sci_jamb').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing three(3) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#sci_waec').on('change', function() {
-                $('#art_waec').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#sci_waec').on('change', function() {
+//                 $('#art_waec').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing Five(5) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
-            $('#art_waec').on('change', function() {
-                $('#sci_waec').hide();
-                if ($("select option:selected").length > 3) {
-                    $(this).removeAttr("selected", false);
-                    $(this).removeAttr("disabled", true);
-                    // alert('English already selected by default, So choose the remaing Five(5) Subject');
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
+//             $('#art_waec').on('change', function() {
+//                 $('#sci_waec').hide();
+//                 if ($("select option:selected").length > 3) {
+//                     $(this).removeAttr("selected", false);
+//                     $(this).removeAttr("disabled", true);
+//                     // alert('English already selected by default, So choose the remaing Five(5) Subject');
 
-                } else {
-                    $(this).removeAttr("disabled", false)
-                }
-            });
+//                 } else {
+//                     $(this).removeAttr("disabled", false)
+//                 }
+//             });
 
             $('.carousel.carousel-slider').carousel({
                 fullWidth: true
@@ -1122,7 +1100,7 @@
                 // disableSubmitBtn();
                 // payWithPaystackJambHard();
                 sendToPhp();
-                window.location.href = "thank-you.html";
+                
             });
         }
         function sendToPhp() {
@@ -1131,10 +1109,8 @@
                     "email": $('input[name="email"]').val(),
                     "phone": $('input[name="phone"]').val(),
                     "address": $('input[name="address"]').val(),
-                    "bundle_jambSci": $('select[name="bundle_jamb_sci[]"]').val(),
-                    "bundle_jambArt": $('select[name="bundle_jamb_art[]"]').val(),
-                    "bundle_waecSci": $('select[name="bundle_waec_sci[]"]').val(),
-                    "bundle_waecArt": $('select[name="bundle_waec_art[]"]').val()
+                    "bundle_jambBundle": $('select[name="bundle_jamb_bundle"]').val(),
+                    "bundle_waecBundle": $('select[name="bundle_waec_bundle"]').val(),
 
                 })
                 // .error(function(error) {});
@@ -1149,7 +1125,9 @@
                         $('#JambHardBtn').hide();
                         $("#mail-status").attr("class", "success");
                         // window.location.href = "thanks.html";
+                        window.location.href = "thank-you.html";
                     }
+                    // window.location.href = "thank-you.html";
                     $("#mail-status").html(response.text);
                 });
         }
