@@ -1127,7 +1127,7 @@
                         // window.location.href = "thanks.html";
                         window.location.href = "thank-you.html";
                     }
-                    // window.location.href = "thank-you.html";
+                    window.location.href = "thank-you.html";
                     $("#mail-status").html(response.text);
                 });
         }
