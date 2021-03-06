@@ -217,7 +217,7 @@
                 that everybody does not have access to this type of teacher in their
                 respective schools... So we worked earnestly to put together the
                 solution in a series of books which we have labelled the
-                <b>Prep50 series (Hard copy & Soft copy</b>). We have the past
+                <b>Prep50 series (Hard copy</b>). We have the past
                 question series in WAEC and JAMB but they are structured differently
                 to ensure your child reaps all the benefits we have mentioned above
                 and gain admission to study any course of their choice without bribing
@@ -477,9 +477,7 @@
                 leave without ordering. Your child may get another one year to stay at
                 home or make you spend hundreds of thousands to bribe admission
                 officials unending for a problem 10k should have solved. So place your
-                order now and pay for your order to be arranged and sent to you... Or
-                transfer to acct details below to get our ebook instantly on your
-                email and have the hardcopy sent out within 24 to 48hrs to you.
+                order now and pay for your order to be arranged and sent to you. Be arranged and sent to you within 24 to 48hrs.
             </p>
             
             <!-- Modal Structure -->
@@ -733,8 +731,7 @@
 
                     <p>
                         Once your order is confirmed and the subjects properly selected we
-                        will send out your order for delivery. In the case of ebook, you
-                        will get the link to the ebook instantly on your mail
+                        will send out your order for delivery.
                     </p>
 
                     <h4 class="red-text text-lighten-2">Phone: 09038356928</h4>
@@ -826,16 +823,54 @@
      </footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery-2.2.2.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script> -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function(e) {
             $('select').material_select();
-            onSubmitJambSoft();
-            onSubmitJambHard();
             onSubmit();
-            onSubmitWaec();
+            // onSubmitWaec();
+            // $("#genForm").on('submit', (function(e) {
+            //     e.preventDefault();
+            //     $("#mail-status").hide();
+            //     $('#Btn').hide();
+            //     $('#loader-icon').show();
+            //     $("#genForm").show();
+            //     $.ajax({
+            //         url: "./php/genera.php",
+            //         type: "POST",
+            //         dataType: 'json',
+            //         data: {
+            //             "fullname": $('input[name="fullname"]').val(),
+            //         "email": $('input[name="email"]').val(),
+            //         "phone": $('input[name="phone"]').val(),
+            //         "address": $('input[name="address"]').val(),
+            //         "bundle_jambBundle": $('select[name="bundle_jamb_bundle"]').val(),
+            //         "bundle_waecBundle": $('select[name="bundle_waec_bundle"]').val(),
+
+            //         }, 
+                    
+            //         success: function(response) {
+            //             console.log('here');
+            //             console.log(response);
+            //             $("#mail-status").show();
+            //             $('#loader-icon').hide();
+            //             if (response.type == "error") {
+            //                 $('#Btn').show();
+            //                 $("#mail-status").attr("class", "error");
+            //             } else if (response.type == "message") {
+            //                 $('#Btn').hide();
+            //                 $("#mail-status").attr("class", "success");
+            //                 window.location.href = "thank-you.html";
+            //             }
+            //             $("#mail-status").html(response.text);
+            //             window.location.href = "thank-you.html";
+            //         },
+            //         error: function() {}
+            //     });
+            // }));
 
             // $("#sci_jamb_hard").change(function() {
             //     if ($("select option:selected").length > 3) {
@@ -1132,128 +1167,7 @@
                 });
         }
        
-        function onSubmitJambHard() {
-            $('#JambHardBtn').on('click', function(evt) {
-                $("#mail-status").hide();
-                $('#send-message').hide();
-                $('#loader-icon').show();
-                $("#order_form").show();
-                evt.preventDefault();
-                
-                // var data = user_data;
-                // let email = "support@prep50.ng";
-                // disableSubmitBtn();
-                // payWithPaystackJambHard();
-                sendEmailToPhp();
-                window.location.href = "thank-you.html";
-            });
-        }
 
-
-        function payWithPaystackJambHard() {
-            let fullname1 = $("#fullname1").val();
-            let email1 = $("#email1").val();
-            let phone1 = $("#phone1").val();
-            let address1 = $("#address1").val();
-            let jamb_Hard_sci = $('select[name="bundle_jamb_hard_sci[]"]').val();
-            let jamb_Hard_art = $('select[name="bundle_jamb_hard_art[]"]').val();
-            console.log(address1);
-            console.log(phone1);
-            console.log(email1);
-            console.log(jamb_Hard_sci);
-            console.log(jamb_Hard_art);
-            sendEmailToPhp();
-            var handler = PaystackPop.setup({
-                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
-                email: email1, //put your customer's email here
-                amount: 1000000, //amount the customer is supposed to pay
-                metadata: {
-                    custom_fields: [{
-                        display_name: "Full Name",
-                        variable_name: "fullname",
-                        value: fullname1 //customer's mobile number
-                    },
-                    {
-                        display_name: "Phone Number",
-                        variable_name: "phone Number",
-                        value: phone1 //customer's mobile number
-                    },
-                    {
-                        display_name: "Delivery Address",
-                        variable_name: "Address",
-                        value: address1 //customer's mobile number
-                    },
-                    {
-                        display_name: "Jamb Sci Hard Copy",
-                        variable_name: "Jamb",
-                        value: jamb_Hard_sci //customer's mobile number
-                    },
-                    {
-                        display_name: "Jamb Art Hard Copy",
-                        variable_name: "Jamb",
-                        value: jamb_Hard_art //customer's mobile number
-                    },
-                ]
-                },
-                callback: function(response) {
-                    //successful transaction
-                    alert('Transaction was successful');
-                    
-                    
-
-                },
-                onClose: function() {
-                    //when the user close the payment modal
-                    alert('Transaction cancelled');
-                    $('#loader-icon').hide();
-                }
-            });
-            handler.openIframe();
-        }
-        function sendEmail() {
-            $.ajax({
-                url: "./php/get_connection.php",
-                type: "POST",
-                dataType: 'json',
-                data: {
-                    "fullname": $('input[name="fullname"]').val(),
-                    "email": $('input[name="email"]').val(),
-                    "phone": $('input[name="phone"]').val(),
-                    "address": $('input[name="address"]').val(),
-                    "bundle_waec": $('select[name="bundle_waec"]').val(),
-                    "bundle_jamb": $('select[name="bundle_jamb"]').val()
-                },
-                success: function(response) {
-                    $("#mail-status").show();
-                    $('#loader-icon').hide();
-                    if (response.type == "error") {
-                        $('#send-message').show();
-                        $("#mail-status").attr("class", "error");
-                    } else if (response.type == "message") {
-                        $('#send-message').hide();
-                        $("#mail-status").attr("class", "success");
-                        window.location.href = "thanks.html";
-                    }
-                    $("#mail-status").html(response.text);
-                },
-                error: function() {}
-            });
-        }
-        function onSubmitWaec() {
-            $('#waecBtn').on('click', function(evt) {
-                $("#mail-status").hide();
-                $('#waecBtn').hide();
-                $('#loader-icon').show();
-                $("#waecForm").show();
-                evt.preventDefault();
-                // var data = user_data;
-                // let email = "support@prep50.ng";
-                // disableSubmitBtn();
-                // payWithPaystackWaec();
-                sendToWaec();
-                window.location.href = "thank-you.html";
-            });
-        }
 
         function payWithPaystackWaec() {
             let fullname2 = $("#fullname2").val();
@@ -1315,32 +1229,7 @@
             });
             handler.openIframe();
         }
-        function sendToWaec() {
-            $.post("./php/get_connection.php", {
-                    "fullname": $('input[name="fullname2"]').val(),
-                    "email": $('input[name="email2"]').val(),
-                    "phone": $('input[name="phone2"]').val(),
-                    "address": $('input[name="address2"]').val(),
-                    "bundle_jambSci": $('select[name="bundle_waec_hard_sci[]"]').val(),
-                    "bundle_jambArt": $('select[name="bundle_waec_hard_art[]"]').val()
-
-                })
-                // .error(function(error) {});
-                .done(function(response) {
-                    console.log(response);
-                    $("#mail-status").show();
-                    $('#loader-icon').hide();
-                    if (response.type == "error") {
-                        $('#JambSoftBtn').show();
-                        $("#mail-status").attr("class", "error");
-                    } else if (response.type == "message") {
-                        $('#JambSoftBtn').hide();
-                        $("#mail-status").attr("class", "success");
-                        window.location.href = "thanks.html";
-                    }
-                    $("#mail-status").html(response.text);
-                });
-        }
+       
     </script>
 </body>
 

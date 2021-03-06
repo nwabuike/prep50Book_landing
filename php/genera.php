@@ -30,8 +30,10 @@ VALUES('".$user_name."', '".$user_email."', '".$user_phone."', '".$user_address.
         $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_name .', thank you for the message. We will get back to you shortly.'));
     die($output);
     }
-} else {
-    $output = json_encode(array('type'=>'error', 'text' => 'There was an error running the query [' . $conn->error . ']'));
-    die($output);
+    return !$result;
 }
+//  else {
+//     $output = json_encode(array('type'=>'error', 'text' => 'There was an error running the query [' . $conn->error . ']'));
+//     die($output);
+// }
 
