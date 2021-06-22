@@ -20,7 +20,7 @@ if ((isset($_POST['fullname']) && $_POST['fullname'] != '')) {
     // $user_bundle_j = $fids;
     // require_once("constant.php");
     $sql = "INSERT INTO users (fullname, email, phone, address, jambSoftSciBundle, waecSoftSciBundle, created_at) 
-VALUES('".$user_name."', '".$user_email."', '".$user_phone."', '".$user_address."','".$user_bundle_j."', '".$user_bundle_w."', now())";
+VALUES('".$user_name."', '".$user_email."', '".$user_phone."', '".$user_address."','".$user_bundle_j."', '".$user_bundle_w. "', '".$sub_date."')";
 // echo $sql;
     if (!$result = $conn->query($sql)) {
         $output = json_encode(array('type'=>'error', 'text' => 'There was an error running the query [' . $conn->error . ']'));
