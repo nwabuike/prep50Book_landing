@@ -1,5 +1,6 @@
 <?php
 require_once("db_connection.php");
+date_default_timezone_set("Africa/Lagos");
 if ((isset($_POST['fullname']) && $_POST['fullname'] != '')) {
     
     // $i = implode(" ", $_POST['bundle_jamb']);
@@ -9,6 +10,7 @@ if ((isset($_POST['fullname']) && $_POST['fullname'] != '')) {
     $user_address = $conn->real_escape_string($_POST['address']);
     $user_bundle_j = $conn->real_escape_string($_POST['bundle_jambBundle']);
     $user_bundle_w = $conn->real_escape_string($_POST['bundle_waecBundle']);
+    $sub_date = date("M d, Y h:i a");
     // $user_bundle_jamb_sci = implode(', ',$_POST['bundle_jambSci']);
     // $user_bundle_jamb_art = implode(', ',$_POST['bundle_jambArt']);
     // $user_bundle_waec_sci = implode(', ',$_POST['bundle_waecSci']);
