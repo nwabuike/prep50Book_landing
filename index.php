@@ -16,6 +16,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Prep50 | Books</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8K0F23D23"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L8K0F23D23');
+    </script>
     <script>
         ! function(f, b, e, v, n, t, s) {
             if (f.fbq) return;
