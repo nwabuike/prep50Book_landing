@@ -759,33 +759,75 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input name="fullname" id="fullname" type="text" class="validate" required>
+                            <input name="fullname" id="fullname" type="text" required />
                             <label for="full_name">Full Name</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="phone" name="phone" type="tel" class="validate" required>
+                            <input id="phone" name="phone" type="tel" required />
                             <label for="phone_number">Phone Number</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" name="email" type="email" class="validate" required>
+                            <input id="email" name="email" type="email" class="validate" required />
                             <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input id="address" type="text" name="address" class="validate" required>
+                        <div class="input-field col s12 m6">
+                            <input id="address" type="text" name="address" class="validate" required />
                             <label for="address">Enter Your Full Address including the city and state</label>
                         </div>
-
+                        <div class="col s12 m6">
+                            <h5 class="red-text text-lighten-2">State of address </h5>
+                            <select required name="state" id="state">
+                                <option disabled selected>Select State</option>
+                                <option value="Abia">Abia</option>
+                                <option value="Adamawa">Adamawa</option>
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                <option value="Anambra">Anambra</option>
+                                <option value="Bauchi">Bauchi</option>
+                                <option value="Bayelsa">Bayelsa</option>
+                                <option value="Benue">Benue</option>
+                                <option value="Borno">Borno</option>
+                                <option value="Cross Rive">Cross River</option>
+                                <option value="Delta">Delta</option>
+                                <option value="Ebonyi">Ebonyi</option>
+                                <option value="Edo">Edo</option>
+                                <option value="Ekiti">Ekiti</option>
+                                <option value="Enugu">Enugu</option>
+                                <option value="FCT">Federal Capital Territory</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Imo">Imo</option>
+                                <option value="Jigawa">Jigawa</option>
+                                <option value="Kaduna">Kaduna</option>
+                                <option value="Kano">Kano</option>
+                                <option value="Katsina">Katsina</option>
+                                <option value="Kebbi">Kebbi</option>
+                                <option value="Kogi">Kogi</option>
+                                <option value="Kwara">Kwara</option>
+                                <option value="Lagos">Lagos</option>
+                                <option value="Nasarawa">Nasarawa</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Ogun">Ogun</option>
+                                <option value="Ondo">Ondo</option>
+                                <option value="Osun">Osun</option>
+                                <option value="Oyo">Oyo</option>
+                                <option value="Plateau">Plateau</option>
+                                <option value="Rivers">Rivers</option>
+                                <option value="Sokoto">Sokoto</option>
+                                <option value="Taraba">Taraba</option>
+                                <option value="Yobe">Yobe</option>
+                                <option value="Zamfara">Zamfara</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m6">
                             <h4 class="red-text text-lighten-2">Jamb Bundle</h4>
                             <div>
-                                <select id="sci_waec_hard" name="bundle_jamb_bundle">
+                                <select id="jamb_bundle" name="jamb_bundle">
                                     <option value="" disabled selected>Choose your Jamb Bundle</option>
                                     <option value="jambScienceBundle">Science Bundle &#8358;10,000</option>
                                     <option value="jambArtBundle">Art Bundle &#8358;10,000</option>
@@ -795,12 +837,23 @@
                         <div class="col s12 m6">
                             <h4 class="red-text text-lighten-2">Waec Bundle </h4>
                             <div>
-                                <select id="sci_waec_hard" name="bundle_waec_bundle">
+                                <select id="waec_bundle" name="waec_bundle">
                                     <option value="" disabled selected>Choose your Waec Bundle</option>
                                     <option value="waecScienceBundle">Science Bundle &#8358;15,000</option>
                                     <option value="waecArtBundle">Art Bundle <b class="red-text text-lighten-2">&#8358;15,000</b></option>
                                 </select>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <h4 class="red-text text-lighten-2">Both Jamb & Waec Bundle </h4>
+                        <div>
+                            <select id="waec_jamb_bundle" name="waec_jamb_bundle">
+                                <option value="none" disabled selected>Choose your Combine Bundle</option>
+                                <option value="waecScienceBundle">Both Jamb & Waec Science Bundle &#8358;22,500</option>
+                                <option value="waecArtBundle">Both Jamb & Waec Art Bundle <b class="red-text text-lighten-2">&#8358;22,500</b></option>
+                                <option value="waecCommercialBundle">Both Jamb & Waec Commercial Bundle <b class="red-text text-lighten-2">&#8358;22,500</b></option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
@@ -832,6 +885,7 @@
     </footer>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <!-- <script type="text/javascript" src="./js/jquery-2.2.2.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script> -->
@@ -1028,109 +1082,108 @@
             $('.carousel.carousel-slider').carousel({
                 fullWidth: true
             });
-            $('.modal').modal();
         });
 
 
-        function onSubmitJambSoft() {
-            $('#JambSoftBtn').on('click', function(evt) {
-                $("#mail-status").hide();
-                $('#JambSoftBtn').hide();
-                $('#loader-icon').show();
-                $("#order_form").show();
-                evt.preventDefault();
-                // var data = user_data;
-                // let email = "support@prep50.ng";
-                // disableSubmitBtn();
-                payWithPaystack();
-                // sendEmailToPhp();
-            });
-        }
+        // function onSubmitJambSoft() {
+        //     $('#JambSoftBtn').on('click', function(evt) {
+        //         $("#mail-status").hide();
+        //         $('#JambSoftBtn').hide();
+        //         $('#loader-icon').show();
+        //         $("#order_form").show();
+        //         evt.preventDefault();
+        //         // var data = user_data;
+        //         // let email = "support@prep50.ng";
+        //         // disableSubmitBtn();
+        //         payWithPaystack();
+        //         // sendEmailToPhp();
+        //     });
+        // }
 
-        function payWithPaystack() {
-            let fullname = $("#fullname").val();
-            let email = $("#email").val();
-            let phone = $("#phone").val();
-            let address = $("#address").val();
-            let jamb_sci = $('select[name="bundle_jamb_sci[]"]').val();
-            let waec = $('select[name="bundle_jamb_art[]"]').val();
-            console.log(address);
-            console.log(phone);
-            console.log(email);
-            var handler = PaystackPop.setup({
-                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
-                email: email, //put your customer's email here
-                amount: 800000, //amount the customer is supposed to pay
-                metadata: {
-                    custom_fields: [{
-                            display_name: "Full Name",
-                            variable_name: "fullname",
-                            value: fullname //customer's mobile number
-                        },
-                        {
-                            display_name: "Phone Number",
-                            variable_name: "phone Number",
-                            value: phone //customer's mobile number
-                        },
-                        {
-                            display_name: "Delivery Address",
-                            variable_name: "Address",
-                            value: address //customer's mobile number
-                        },
-                        {
-                            display_name: "Jamb Sci Soft Copy",
-                            variable_name: "Jamb",
-                            value: jamb_sci //customer's mobile number
-                        },
-                        {
-                            display_name: "Jamb Art Soft Copy",
-                            variable_name: "Jamb",
-                            value: waec //customer's mobile number
-                        },
-                    ]
-                },
-                callback: function(response) {
-                    //successful transaction
-                    alert('Transaction was successful');
-                    sendEmailToPhp();
+        // function payWithPaystack() {
+        //     let fullname = $("#fullname").val();
+        //     let email = $("#email").val();
+        //     let phone = $("#phone").val();
+        //     let address = $("#address").val();
+        //     let jamb_sci = $('select[name="bundle_jamb_sci[]"]').val();
+        //     let waec = $('select[name="bundle_jamb_art[]"]').val();
+        //     console.log(address);
+        //     console.log(phone);
+        //     console.log(email);
+        //     var handler = PaystackPop.setup({
+        //         key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
+        //         email: email, //put your customer's email here
+        //         amount: 800000, //amount the customer is supposed to pay
+        //         metadata: {
+        //             custom_fields: [{
+        //                     display_name: "Full Name",
+        //                     variable_name: "fullname",
+        //                     value: fullname //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Phone Number",
+        //                     variable_name: "phone Number",
+        //                     value: phone //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Delivery Address",
+        //                     variable_name: "Address",
+        //                     value: address //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Jamb Sci Soft Copy",
+        //                     variable_name: "Jamb",
+        //                     value: jamb_sci //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Jamb Art Soft Copy",
+        //                     variable_name: "Jamb",
+        //                     value: waec //customer's mobile number
+        //                 },
+        //             ]
+        //         },
+        //         callback: function(response) {
+        //             //successful transaction
+        //             alert('Transaction was successful');
+        //             sendEmailToPhp();
 
-                },
-                onClose: function() {
-                    //when the user close the payment modal
-                    alert('Transaction cancelled');
-                    $('#loader-icon').hide();
-                }
-            });
-            handler.openIframe(); //open the paystack's payment modal
+        //         },
+        //         onClose: function() {
+        //             //when the user close the payment modal
+        //             alert('Transaction cancelled');
+        //             $('#loader-icon').hide();
+        //         }
+        //     });
+        //     handler.openIframe(); //open the paystack's payment modal
 
-        }
+        // }
 
-        function sendEmailToPhp() {
-            $.post("./php/get_connection.php", {
-                    "fullname": $('input[name="fullname1"]').val(),
-                    "email": $('input[name="email1"]').val(),
-                    "phone": $('input[name="phone1"]').val(),
-                    "address": $('input[name="address1"]').val(),
-                    "bundle_jambSci": $('select[name="bundle_jamb_hard_sci[]"]').val(),
-                    "bundle_jambArt": $('select[name="bundle_jamb_hard_art[]"]').val()
+        // function sendEmailToPhp() {
+        //     $.post("./php/get_connection.php", {
+        //             "fullname": $('input[name="fullname1"]').val(),
+        //             "email": $('input[name="email1"]').val(),
+        //             "phone": $('input[name="phone1"]').val(),
+        //             "address": $('input[name="address1"]').val(),
+        //             "bundle_jambSci": $('select[name="bundle_jamb_hard_sci[]"]').val(),
+        //             "bundle_jambArt": $('select[name="bundle_jamb_hard_art[]"]').val()
 
-                })
-                // .error(function(error) {});
-                .done(function(response) {
-                    console.log(response);
-                    $("#mail-status").show();
-                    $('#loader-icon').hide();
-                    if (response.type == "error") {
-                        $('#JambHardBtn').show();
-                        $("#mail-status").attr("class", "error");
-                    } else if (response.type == "message") {
-                        $('#JambHardBtn').hide();
-                        $("#mail-status").attr("class", "success");
-                        // window.location.href = "thanks.html";
-                    }
-                    $("#mail-status").html(response.text);
-                });
-        }
+        //         })
+        //         // .error(function(error) {});
+        //         .done(function(response) {
+        //             console.log(response);
+        //             $("#mail-status").show();
+        //             $('#loader-icon').hide();
+        //             if (response.type == "error") {
+        //                 $('#JambHardBtn').show();
+        //                 $("#mail-status").attr("class", "error");
+        //             } else if (response.type == "message") {
+        //                 $('#JambHardBtn').hide();
+        //                 $("#mail-status").attr("class", "success");
+        //                 // window.location.href = "thanks.html";
+        //             }
+        //             $("#mail-status").html(response.text);
+        //         });
+        // }
 
         function onSubmit() {
             $('#Btn').on('click', function(evt) {
@@ -1155,8 +1208,10 @@
                     "email": $('input[name="email"]').val(),
                     "phone": $('input[name="phone"]').val(),
                     "address": $('input[name="address"]').val(),
-                    "bundle_jambBundle": $('select[name="bundle_jamb_bundle"]').val(),
-                    "bundle_waecBundle": $('select[name="bundle_waec_bundle"]').val(),
+                    "state": $('select[name="state"]').val(),
+                    "jambBundle": $('select[name="jamb_bundle"]').val(),
+                    "waecBundle": $('select[name="waec_bundle"]').val(),
+                    "waec_jambBundle": $('select[name="waec_jamb_bundle"]').val(),
 
                 })
                 // .error(function(error) {});
@@ -1180,66 +1235,66 @@
 
 
 
-        function payWithPaystackWaec() {
-            let fullname2 = $("#fullname2").val();
-            let email2 = $("#email2").val();
-            let phone2 = $("#phone2").val();
-            let address2 = $("#address2").val();
-            let waec_Hard_sci = $('select[name="bundle_waec_hard_sci[]"]').val();
-            let waec_Hard_art = $('select[name="bundle_waec_hard_art[]"]').val();
-            console.log(address2);
-            console.log(phone2);
-            console.log(email2);
-            console.log(waec_Hard_sci);
-            console.log(waec_Hard_art);
+        // function payWithPaystackWaec() {
+        //     let fullname2 = $("#fullname2").val();
+        //     let email2 = $("#email2").val();
+        //     let phone2 = $("#phone2").val();
+        //     let address2 = $("#address2").val();
+        //     let waec_Hard_sci = $('select[name="bundle_waec_hard_sci[]"]').val();
+        //     let waec_Hard_art = $('select[name="bundle_waec_hard_art[]"]').val();
+        //     console.log(address2);
+        //     console.log(phone2);
+        //     console.log(email2);
+        //     console.log(waec_Hard_sci);
+        //     console.log(waec_Hard_art);
 
-            var handler = PaystackPop.setup({
-                key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
-                email: email2, //put your customer's email here
-                amount: 1500000, //amount the customer is supposed to pay
-                metadata: {
-                    custom_fields: [{
-                            display_name: "Full Name",
-                            variable_name: "fullname",
-                            value: fullname2 //customer's mobile number
-                        },
-                        {
-                            display_name: "Phone Number",
-                            variable_name: "phone Number",
-                            value: phone2 //customer's mobile number
-                        },
-                        {
-                            display_name: "Delivery Address",
-                            variable_name: "Address",
-                            value: address2 //customer's mobile number
-                        },
-                        {
-                            display_name: "Waec Sci Hard Copy",
-                            variable_name: "Jamb",
-                            value: waec_Hard_sci //customer's mobile number
-                        },
-                        {
-                            display_name: "Waec Art Hard Copy",
-                            variable_name: "Jamb",
-                            value: waec_Hard_art //customer's mobile number
-                        },
-                    ]
-                },
-                callback: function(response) {
-                    //successful transaction
-                    alert('Transaction was successful');
+        //     var handler = PaystackPop.setup({
+        //         key: 'pk_live_b19d2b16b5c91f33f6581ad46b428840d93e48a2', //put your public key here
+        //         email: email2, //put your customer's email here
+        //         amount: 1500000, //amount the customer is supposed to pay
+        //         metadata: {
+        //             custom_fields: [{
+        //                     display_name: "Full Name",
+        //                     variable_name: "fullname",
+        //                     value: fullname2 //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Phone Number",
+        //                     variable_name: "phone Number",
+        //                     value: phone2 //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Delivery Address",
+        //                     variable_name: "Address",
+        //                     value: address2 //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Waec Sci Hard Copy",
+        //                     variable_name: "Jamb",
+        //                     value: waec_Hard_sci //customer's mobile number
+        //                 },
+        //                 {
+        //                     display_name: "Waec Art Hard Copy",
+        //                     variable_name: "Jamb",
+        //                     value: waec_Hard_art //customer's mobile number
+        //                 },
+        //             ]
+        //         },
+        //         callback: function(response) {
+        //             //successful transaction
+        //             alert('Transaction was successful');
 
-                    window.location.href = "thank-you.html";
+        //             window.location.href = "thank-you.html";
 
-                },
-                onClose: function() {
-                    //when the user close the payment modal
-                    alert('Transaction cancelled');
-                    $('#loader-icon').hide();
-                }
-            });
-            handler.openIframe();
-        }
+        //         },
+        //         onClose: function() {
+        //             //when the user close the payment modal
+        //             alert('Transaction cancelled');
+        //             $('#loader-icon').hide();
+        //         }
+        //     });
+        //     handler.openIframe();
+        // }
     </script>
 </body>
 
